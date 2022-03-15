@@ -1,0 +1,38 @@
+.flex {
+  display: flex;
+}
+.flex.row {
+  flex-direction: row;
+}
+.flex.col {
+  flex-direction: column;
+}
+.flex-1 {
+  flex: 1;
+}
+.center {
+  align-items: center;
+}
+.jcenter {
+  justify-content: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+}
+
+.grid.main {
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 90%;
+}
+
+.grid.gallery {
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
