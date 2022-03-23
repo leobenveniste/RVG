@@ -1,0 +1,27 @@
+@media (min-width: 768px) {
+  header a {
+    font-size: 1.5rem;
+  }
+  
+  .people {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .people .person{
+    width: 50%;
+    padding: 2rem .5rem;
+  }
+}
+
+@media (min-width: 540px) {
+  header .menu {
+    display: flex;
+  }
+  header .mobileMenu {
+    display: none;
+  }
+  .game {
+    flex-direction: row;
+  }
+}
