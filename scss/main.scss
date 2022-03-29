@@ -4,9 +4,13 @@
 $underline: 3px;
 $accentColor: #ff1493;
 
-html, body {
+@mixin clear {
   margin: 0;
   padding: 0;
+}
+
+html, body {
+  @include clear();
   font-size: 1em;
   line-height: 1;
   height: 100vh;
@@ -49,11 +53,11 @@ a {
 }
 
 h1 {
+  @include clear();
   font-family: 'Arcade';
   font-weight: 400;
   font-size: 3rem;
   line-height: 1.5;
-  margin: 0;
   text-shadow: 4px 4px $accentColor;
   text-align: center;
   
@@ -92,20 +96,23 @@ header {
   padding: 1rem 2rem;
   min-height: 100px;
 
-  & a {
+  & a{
     font-size: 1rem;
     color: white;
     text-transform: uppercase;
     text-decoration: none;
     transition: all 100ms linear;
+    &:hover {
+      color: inherit;
+    }
   }
 
-  & ul {
+  & .menuContainer {
+    @include clear();
     list-style-type: none;
     gap: 1rem;
-    padding: 0;
     
-    & a {
+    & a span {
       text-decoration: underline;
       text-decoration-color: transparent;
       text-decoration-thickness: $underline;

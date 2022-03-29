@@ -74,11 +74,12 @@ a {
   height: 115px; }
 
 h1 {
+  margin: 0;
+  padding: 0;
   font-family: 'Arcade';
   font-weight: 400;
   font-size: 3rem;
   line-height: 1.5;
-  margin: 0;
   text-shadow: 4px 4px #ff1493;
   text-align: center; }
   h1.retro {
@@ -114,18 +115,21 @@ header {
     text-transform: uppercase;
     text-decoration: none;
     transition: all 100ms linear; }
-  header ul {
+    header a:hover {
+      color: inherit; }
+  header .menuContainer {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
-    gap: 1rem;
-    padding: 0; }
-    header ul a {
+    gap: 1rem; }
+    header .menuContainer a span {
       text-decoration: underline;
       text-decoration-color: transparent;
       text-decoration-thickness: 3px;
       text-underline-offset: 5px;
       transition: all 100ms ease-out;
       position: relative; }
-      header ul a:before {
+      header .menuContainer a span:before {
         content: "";
         position: absolute;
         width: 100%;
@@ -137,7 +141,7 @@ header {
         transform: scaleX(0);
         transition: 100ms ease-out;
         box-shadow: 0 0 10px 2px #ff1493; }
-      header ul a:hover:before {
+      header .menuContainer a span:hover:before {
         visibility: visible;
         transform: scaleX(1); }
   header .mobileMenu {
