@@ -26,15 +26,15 @@
 
 /* GRID */
 .grid {
-  display: grid; }
+  display: grid;
+  overflow: auto; }
   .grid.main {
     grid-template-columns: 100%;
     grid-template-rows: 10% 90%; }
   .grid.gallery {
     width: 100%;
-    height: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr; }
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px; }
 
 html, body {
   margin: 0;
@@ -271,4 +271,7 @@ input[type="submit"] {
   header .mobileMenu {
     display: none; }
   .game {
-    flex-direction: row; } }
+    flex-direction: row; }
+  .grid.gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr; } }
